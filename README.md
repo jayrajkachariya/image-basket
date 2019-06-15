@@ -1,8 +1,12 @@
 ## Image Basket
 
+View live demo at [https://image-basket.herokuapp.com/](https://image-basket.herokuapp.com/).
+
 Image Basket is small prototype of Google image search. It fetches data from ShutterStock API and shows images accordingly. This is testing based project and having no commercial use case.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+To Start with this project in development mode clone this repo and run `npm i` and after then `npm run dev`. Make sure you have installed `Node` on your machine.
 
 ## Available Scripts
 
