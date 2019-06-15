@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const sstk = require('shutterstock-api');
-const port = process.env.PORT || 5000;
+const port = 5000;
 
 app.use(bodyParser.text());
 app.use(cors());

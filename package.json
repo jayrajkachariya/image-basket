@@ -20,7 +20,7 @@
   },
   "scripts": {
     "dev": "concurrently --kill-others 'node server.js' 'npm run dev'",
-    "start": "concurrently --kill-others 'node server.js' 'serve -s build'",
+    "start": "serve -s build",
     "front": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
