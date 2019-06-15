@@ -1,9 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const favicon = require('express-favicon');
-const path = require('path');
-
 const app = express();
 const sstk = require('shutterstock-api');
 const port = process.env.PORT || 5000;
@@ -22,23 +19,11 @@ const fetchImages = async query => {
     query: query.search,
     image_type: 'photo',
     page: query.page,
-    per_page: 20,
+    per_page: 25,
     sort: 'relevance',
     orientation: 'horizontal'
   });
 };
-
-app.use(express.static(__dirname));
-app.use(express.static(path.join(__dirname, 'build')));
-app.use(favicon(__dirname + '/build/favicon.ico'));
-
-app.get('/ping', function(req, res) {
-  return res.send('pong');
-});
-
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 app.post('/get-images', (req, res) => {
   fetchImages(req.body)

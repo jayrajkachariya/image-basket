@@ -2,6 +2,7 @@
   "name": "image-basket",
   "version": "0.1.0",
   "private": true,
+  "author": "Jayraj Kachariya",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -15,14 +16,17 @@
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.3",
+    "serve": "^11.0.1",
     "shutterstock-api": "^1.0.6"
   },
   "scripts": {
-    "start": "concurrently --kill-others 'nodemon server.js' 'npm run dev'",
-    "dev": "react-scripts start",
+    "dev": "concurrently --kill-others 'nodemon server.js' 'npm run dev'",
+    "start": "concurrently --kill-others 'nodemon server.js' 'serve -s build'",
+    "front": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"

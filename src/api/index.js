@@ -1,5 +1,5 @@
 // let devURL = 'http://localhost:5000/get-images/';
-let prodURL = 'https://image-basket-jayraj.herokuapp.com/get-images/';
+let prodURL = 'https://image-basket.herokuapp.com/get-images/';
 
 const fetchImages = async ({ query, page }) => {
   const res = await fetch(prodURL, {
