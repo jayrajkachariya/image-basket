@@ -19,8 +19,8 @@
     "shutterstock-api": "^1.0.6"
   },
   "scripts": {
-    "dev": "concurrently --kill-others 'nodemon server.js' 'npm run dev'",
-    "start": "concurrently --kill-others 'nodemon server.js' 'serve -s build'",
+    "dev": "concurrently --kill-others 'node server.js' 'npm run dev'",
+    "start": "concurrently --kill-others 'node server.js' 'serve -s build'",
     "front": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
